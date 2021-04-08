@@ -7,7 +7,7 @@ import tcat from './img/ho.jpg';
 
 function App() {
 
-  const [cats, set_id] = useState({
+const [cats/*, set_id*/] = useState({
     _id : 0,
     head :  'MU YA-ONG',
     img : [
@@ -17,17 +17,18 @@ function App() {
     ]
   });
   
-  const setimg = () =>{
-    count++;
-    if(count==3) count=0;
-    set_id({
-      _id : count 
-    });
-  }
+  const [count, setcount] = useState(0);
+  const _catimg = cats.img[count /*cats._id*/].catimg;
+  const _name = cats.img[count /*cats._id*/].name;
 
-  const count = cats._id;
-  const _catimg = cats.img[cats._id].catimg;
-  const _name = cats.img[cats._id].name;
+  const setimg = () =>{
+    setcount((count)=> count+1 )
+    if(count==2) setcount(0);
+    // set_id((aa)=>({
+    //   ...aa,
+    //   _id : count 
+    // }));
+  }
 
   return (
     <div className="wrap">
