@@ -1,8 +1,10 @@
 import { useState } from 'react';
+
 import './App.css';
 import fcat from './img/ha.jpg';
 import scat from './img/he.jpg';
 import tcat from './img/ho.jpg';
+import Middlecat from './middlecat';
 
 
 function App() {
@@ -30,6 +32,7 @@ const [cats/*, set_id*/] = useState({
     // }));
   }
 
+
   return (
     <div className="wrap">
       <div className="mooyaho">
@@ -39,11 +42,7 @@ const [cats/*, set_id*/] = useState({
           </div>
           <h1 className="my"><a href="/">{cats.head}</a></h1>
         </header> 
-        <div className="imgcat">
-          <a href="/"><img src={_catimg} alt="cat"></img></a>
-          <a href="/"><img src={_catimg} alt="cat"></img></a>
-          <a href="/"><img src={_catimg} alt="cat"></img></a>
-        </div>
+        <Middlecat imgs={_catimg}/>
         <div className="gotohouse">
             <button className="Btn" onClick={setimg}>{_name}</button>
           </div>
