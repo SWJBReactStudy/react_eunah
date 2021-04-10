@@ -18,20 +18,44 @@ const [cats/*, set_id*/] = useState({
       { name: 'myo', catimg : tcat}
     ]
   });
-  
+
   const [count, setcount] = useState(0);
   const _catimg = cats.img[count /*cats._id*/].catimg;
   const _name = cats.img[count /*cats._id*/].name;
 
   const setimg = () =>{
     setcount((count)=> count+1 )
-    if(count==2) setcount(0);
+    if(count===2) setcount(0);
     // set_id((aa)=>({
     //   ...aa,
     //   _id : count 
     // }));
   }
 
+  const destructuring = {
+    state: {
+      import: {
+        what: 'cat',
+        name: ['candy', 'butterfly', 'baby']
+      }
+    },
+    how: 3
+  };
+
+  const {
+    state: {
+      import : {what, name}
+    },
+    how
+  } = destructuring;
+
+  const aa = {
+    what,
+    name,
+    how
+  };
+
+  console.log(aa);
 
   return (
     <div className="wrap">
@@ -45,7 +69,7 @@ const [cats/*, set_id*/] = useState({
         <Middlecat imgs={_catimg}/>
         <div className="gotohouse">
             <button className="Btn" onClick={setimg}>{_name}</button>
-          </div>
+        </div>
       </div>
     </div>
   );

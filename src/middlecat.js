@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 function Middlecat(props) {
     return(
         <div className="imgcat">
