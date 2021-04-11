@@ -47,7 +47,7 @@ const [cats/*, set_id*/] = useState({
       import : {what, name}
     },
     how
-  } = destructuring;
+  } = destructuring; //destructuring의 값들을 꺼내오는 거
 
   const aa = {
     what,
@@ -55,7 +55,7 @@ const [cats/*, set_id*/] = useState({
     how
   };
 
-  console.log(aa);
+  console.log(aa); //what : 'cat', name : array(3), how : 3
 
   return (
     <div className="wrap">
