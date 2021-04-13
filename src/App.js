@@ -1,11 +1,11 @@
 import { useState } from 'react';
-
 import './App.css';
+
 import fcat from './img/ha.jpg';
 import scat from './img/he.jpg';
 import tcat from './img/ho.jpg';
 import Middlecat from './middlecat';
-
+import Quiz from './quiz';
 
 function App() {
 
@@ -70,8 +70,9 @@ const [cats/*, set_id*/] = useState({
         <div className="gotohouse">
             <button className="Btn" onClick={setimg}>{_name}</button>
         </div>
-      </div>
+      <Quiz />
     </div>
+  </div>
   );
 }
 
