@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function quiz() {
+function Quiz() {
   const [text, setText] = useState('');
 
   const onChange = (e) => {
@@ -22,4 +22,4 @@ function quiz() {
   );
 }
 
-export default quiz;
+export default Quiz;

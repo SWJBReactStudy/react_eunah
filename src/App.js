@@ -1,11 +1,13 @@
 import { useState } from 'react';
 import './App.css';
+import Middlecat from './middlecat';
+import Quiz from './Quiz';
 
 import fcat from './img/ha.jpg';
 import scat from './img/he.jpg';
 import tcat from './img/ho.jpg';
-import Middlecat from './middlecat';
-import Quiz from './quiz';
+import dong from './img/dong.png';
+
 
 function App() {
 
@@ -13,9 +15,10 @@ const [cats/*, set_id*/] = useState({
     _id : 0,
     head :  'MU YA-ONG',
     img : [
-      { name: 'hodong', catimg : fcat},
+      { name: 'myo', catimg : fcat},
       { name: 'hwak', catimg : scat},
-      { name: 'myo', catimg : tcat}
+      { name: 'hodong', catimg : tcat},
+      { name: '동현신', catimg : dong}
     ]
   });
 
@@ -25,7 +28,7 @@ const [cats/*, set_id*/] = useState({
 
   const setimg = () =>{
     setcount((count)=> count+1 )
-    if(count===2) setcount(0);
+    if(count===3) setcount(0);
     // set_id((aa)=>({
     //   ...aa,
     //   _id : count 
@@ -64,7 +67,7 @@ const [cats/*, set_id*/] = useState({
           <div className="logoboard">
             <img src={_catimg} className="logo" alt="teat1234"></img>
           </div>
-          <h1 className="my"><a href="/">{cats.head}</a></h1>
+          <h1 className="my">{cats.head}</h1>
         </header> 
         <Middlecat imgs={_catimg}/>
         <div className="gotohouse">
