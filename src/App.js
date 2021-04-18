@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import './App.css';
 
-import fcat from './img/ha.jpg';
+import fcat from './img/ho.jpg';
 import scat from './img/he.jpg';
-import tcat from './img/ho.jpg';
+import tcat from './img/ha.jpg';
 import Middlecat from './middlecat';
-import Quiz from './quiz';
+import Quiz from './Quiz';
 
 function App() {
 
@@ -22,6 +22,8 @@ const [cats/*, set_id*/] = useState({
   const [count, setcount] = useState(0);
   const _catimg = cats.img[count /*cats._id*/].catimg;
   const _name = cats.img[count /*cats._id*/].name;
+  const texta = Quiz.text;
+  console.log(texta);
 
   const setimg = () =>{
     setcount((count)=> count+1 )
@@ -30,6 +32,7 @@ const [cats/*, set_id*/] = useState({
     //   ...aa,
     //   _id : count 
     // }));
+    if(texta==='hodong') setcount(0);
   }
 
   const destructuring = {
@@ -70,8 +73,8 @@ const [cats/*, set_id*/] = useState({
         <div className="gotohouse">
             <button className="Btn" onClick={setimg}>{_name}</button>
         </div>
-      <Quiz />
     </div>
+    <Quiz />
   </div>
   );
 }
