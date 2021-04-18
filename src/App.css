@@ -34,15 +34,15 @@ a{
   color: rgb(24, 138, 158);
   background-color: rgb(230, 173, 182); 
 }
-.my>a{
+.my>img{
   margin-left: -100px;
 }
 .imgcat{
   position: relative;
   margin-left: -10px;
 }
-.imgcat > a {
-  margin-left: 15px;
+.imgcat > img {
+  margin-left: 25px;
 }
 img{
   width: 300px;
